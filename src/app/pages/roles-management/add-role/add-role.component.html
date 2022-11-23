@@ -1,0 +1,118 @@
+<app-content-header [title]="'Add Role'" [hideBreadcrumb]="false" [hasBgImage]="true" [class]="'pb-4'">
+</app-content-header>
+
+<mat-card class="p-0">
+    <!-- <div class="bg-primary text-left py-2">       
+            <h2>Edit your data :</h2> 
+        </div>  -->
+        <div fxLayout="row wrap" fxLayoutAlign="start top">
+    <form fxLayout="row wrap" class="user-form p-2">
+        <div fxFlex="100" fxFlex.gt-sm="30" fxFlex.sm="50" class="p-2">
+            <h3 style="margin-top: 15px;">Role Name : *</h3>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="70" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Role Name *</mat-label>
+                <input matInput autocomplete="off" placeholder="Enter Role Name" formControlName="role_nm"
+                    type="text">
+            </mat-form-field>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="p-2">
+            <h2>Modules</h2>
+        </div>
+
+        <!-- Employees start here -->
+        
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="p-2">
+            <h3>Employees</h3>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Create Employee</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Edit Employee</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Employee List</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Delete Employee</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>All Employee Tracking</mat-slide-toggle>
+        </div>
+        <!-- Employees end here -->
+
+        <!-- sample start here -->
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="p-2">
+            <h3>Sample Collections</h3>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>In Lets</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>TSR</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="30" fxFlex.sm="30" class="p-2">
+            <mat-slide-toggle>Ward Wise Sample Collection</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="15" fxFlex.sm="15" class="p-2">
+            <p>X</p>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="15" fxFlex.sm="15" class="p-2">
+            <p>X</p>
+        </div>
+        <!-- sample end here -->
+
+
+        <!-- Roles start here -->
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="p-2">
+            <h3>Roles</h3>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Add Role</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Edit Role</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>List Roles</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <p>X</p>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <p>X</p>
+        </div>
+        <!-- Roles end here -->
+
+
+
+        <!-- Settings start here -->
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="p-2">
+            <h3>Settings</h3>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Add Settings</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Edit Settings</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>View Settings</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>Reports Download</mat-slide-toggle>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="20" fxFlex.sm="20" class="p-2">
+            <mat-slide-toggle>TSR</mat-slide-toggle>
+        </div>
+        <!-- Settings end here -->
+
+        <div fxFlex="100" class="p-2 text-center" style="margin-top: 20px;">
+            <button mat-raised-button color="primary" class="uppercase mx-1" type="submit">Save Roles</button>
+        </div>
+
+    </form>
+</div>
+</mat-card>

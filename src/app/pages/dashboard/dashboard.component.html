@@ -1,0 +1,247 @@
+<app-content-header icon="dashboard" desc="Welcome to Greater Vizag Municipal Corporation" [hideBreadcrumb]="true"
+    [hasBgImage]="true" [class]="'py-3'"></app-content-header>
+
+<!-- Grid Start Here-->
+<div class="p-2">
+    <div fxLayout="row wrap">
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-green tile p-2">
+                <mat-icon>monetization_on</mat-icon>
+                <h2>500</h2>
+                <p>Total Employees </p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-red tile p-2">
+                <mat-icon>thumb_up_alt</mat-icon>
+                <h2>200</h2>
+                <p>Active Employees</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-orange tile p-2">
+                <mat-icon>group</mat-icon>
+                <h2>50</h2>
+                <p>Inactive Employees</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-pink tile p-2">
+                <mat-icon>shopping_cart</mat-icon>
+                <h2>100</h2>
+                <p>Today Present</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-gray tile p-2">
+                <mat-icon>pie_chart</mat-icon>
+                <h2>30</h2>
+                <p>Today Absent</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-brown tile p-2">
+                <mat-icon>save_alt</mat-icon>
+                <h2>10</h2>
+                <p>Other Activities</p>
+            </mat-card>
+        </div>
+    </div>
+
+    <div fxLayout="row wrap">
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-purple tile p-2">
+                <mat-icon>monetization_on</mat-icon>
+                <h2>98</h2>
+                <p>Total Wards </p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-indigo tile p-2">
+                <mat-icon>thumb_up_alt</mat-icon>
+                <h2>200</h2>
+                <p>Total Sample Collected</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-blue tile p-2">
+                <mat-icon>group</mat-icon>
+                <h2>100</h2>
+                <p>Agents</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-amber tile p-2">
+                <mat-icon>shopping_cart</mat-icon>
+                <h2>100</h2>
+                <p>Submited to Lab</p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-teal tile p-2">
+                <mat-icon>pie_chart</mat-icon>
+                <h2>90</h2>
+                <p>Lab Reports </p>
+            </mat-card>
+        </div>
+        <div fxFlex="50" fxFlex.xl="16.6" fxFlex.lg="16.6" fxFlex.md="33.3" fxFlex.sm="33.3" class="p-2">
+            <mat-card class="gradient-lime tile p-2">
+                <mat-icon>save_alt</mat-icon>
+                <h2>20</h2>
+                <p> Videos Uploaded</p>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<!-- Grid end Here-->
+
+<!-- Piechart Start Here-->
+<div class="p-2">
+    <div fxLayout="row wrap">
+        <div fxFlex="100" fxFlex.gt-sm="50" class="p-2">
+           
+            <mat-card>
+                <mat-card-header fxLayoutAlign="center center">                
+                    <mat-card-subtitle><h2>Pie Chart</h2></mat-card-subtitle>
+                </mat-card-header>
+                <div class="w-100 h-300p">
+                    <ngx-charts-pie-chart
+                        [scheme]="colorScheme"
+                        [results]="single"
+                        [legend]="showLegend"
+                        [explodeSlices]="explodeSlices"
+                        [labels]="showLabels"
+                        [doughnut]="doughnut"
+                        [gradient]="gradient"
+                        (select)="onSelect($event)">
+                    </ngx-charts-pie-chart>                  
+                </div>
+            </mat-card>
+
+
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="50" class="p-2">
+            <mat-card>
+                <mat-card-header fxLayoutAlign="center center">                
+                    <mat-card-subtitle><h2>Vertical Bar Chart</h2></mat-card-subtitle>
+                </mat-card-header>
+                <div class="w-100 h-300p">
+                    <ngx-charts-bar-vertical
+                          [scheme]="colorScheme"
+                          [gradient]="gradient"
+                          [xAxis]="showXAxis"
+                          [yAxis]="showYAxis"
+                          [legend]="showLegend"
+                          [showXAxisLabel]="showXAxisLabel"
+                          [showYAxisLabel]="showYAxisLabel"
+                          [xAxisLabel]="xAxisLabel"
+                          [yAxisLabel]="yAxisLabel"
+                          [results]="single"
+                          (select)="onSelect($event)">
+                    </ngx-charts-bar-vertical>                  
+                </div>
+            </mat-card>    
+        </div>
+    </div>
+    </div>
+    <!-- Piechart end Here-->
+
+
+    <!-- Data Table Start Here-->
+<div class="p-2">
+    <mat-card-header fxLayoutAlign="left">
+        <mat-card-subtitle>
+            <h2>Recent Activities</h2>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <div fxLayout="row wrap">        
+        <div fxFlex="100" fxFlex.gt-sm="100" class="p-2">
+            <div fxLayout="column" class="mat-elevation-z8">           
+                <mat-form-field class="px-3 py-1">
+                    <input matInput placeholder="Type to filter the name column..." (keyup)="updateFilter($event)">
+                </mat-form-field>
+            </div>
+            <ngx-datatable
+                #table
+                class="material"
+                [headerHeight]="50"
+                [limit]="10"
+                [columnMode]="'force'"
+                [footerHeight]="50"
+                [rowHeight]="'auto'"
+                [rows]="rows"
+                [loadingIndicator]="loadingIndicator"
+                [selected]="selected"
+                [selectionType]="'checkbox'"
+                (activate)="onActivate($event)"
+                (select)='onSelect($event)'>
+                <ngx-datatable-column
+                    [width]="30"
+                    [sortable]="false"
+                    [canAutoResize]="false"
+                    [draggable]="true"
+                    [resizeable]="false"
+                    [headerCheckboxable]="true"
+                    [checkboxable]="true">
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Name">
+                  <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                    <span
+                      title="Double click to edit"
+                      (dblclick)="editing[rowIndex + '-name'] = true"
+                      *ngIf="!editing[rowIndex + '-name']">
+                      {{value}}
+                    </span>
+                    <input
+                      autofocus
+                      (blur)="updateValue($event, 'name', rowIndex)"
+                      *ngIf="editing[rowIndex+ '-name']"
+                      type="text"
+                      [value]="value"
+                    />
+                  </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Gender">
+                  <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                    <span
+                      title="Double click to edit"
+                      (dblclick)="editing[rowIndex + '-gender'] = true"
+                      *ngIf="!editing[rowIndex + '-gender']">
+                      {{value}}
+                    </span>
+                    <select
+                      *ngIf="editing[rowIndex + '-gender']"
+                      (change)="updateValue($event, 'gender', rowIndex)"
+                      [value]="value">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Company">
+                  <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                  </ng-template>
+                </ngx-datatable-column>
+            </ngx-datatable>
+        </div>
+    </div>
+    </div>
+    <!-- Data Table end Here-->
+
+    <!-- Tracking Start Here-->
+    <div class="p-2">
+        <mat-card-header fxLayoutAlign="left">
+            <mat-card-subtitle>
+                <h2>Agents Live Tracking</h2>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <div fxLayout="row wrap">
+            <div fxFlex="100" fxFlex.gt-sm="100" class="p-2">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [mapTypeControl]="true">
+                    <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true"></agm-marker>
+                </agm-map>
+            </div>
+        </div>
+    </div>
+    <!-- Tracking Here-->

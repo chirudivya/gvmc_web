@@ -1,0 +1,274 @@
+<app-content-header [title]="'Add Employee'" [hideBreadcrumb]="false" [hasBgImage]="true" [class]="'pb-4'"></app-content-header>
+
+<mat-card class="p-0">
+    <!-- <div class="bg-primary text-left py-2">       
+            <h2>Edit your data :</h2> 
+        </div>  -->
+
+    <form [formGroup]="personalForm" (ngSubmit)="onSubmit(personalForm.value)" fxLayout="row wrap"
+        class="user-form p-2">
+
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput autocomplete="off" placeholder="Employee First Name" formControlName="emp_first_name"
+                    type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.firstname.errors?.required">First Name is required</mat-error>                 -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput autocomplete="off" placeholder="Employee Last Name" formControlName="emp_last_name"
+                    type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.firstname.errors?.required">First Name is required</mat-error>                 -->
+            </mat-form-field>
+        </div>
+
+       
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Employee Code</mat-label>
+                <input matInput autocomplete="off" placeholder="Employee Code" formControlName="emp_code" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.lastname.errors?.required">Last Name is required</mat-error>                   -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Company Name</mat-label>
+                <input matInput autocomplete="off" placeholder="Company Name" formControlName="cpy_nm" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.lastname.errors?.required">Last Name is required</mat-error>                   -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput autocomplete="off" placeholder="User Name" formControlName="user_nm" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.lastname.errors?.required">Last Name is required</mat-error>                   -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput autocomplete="off" placeholder="Password" formControlName="pwd" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.lastname.errors?.required">Last Name is required</mat-error>                   -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput autocomplete="off" placeholder="Confirm Password" formControlName="cfm_pwd" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.lastname.errors?.required">Last Name is required</mat-error>                   -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Company Email</mat-label>
+                <input matInput autocomplete="off" placeholder="Company Email" formControlName="cmp_email" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Designation</mat-label>
+                <mat-select placeholder="Select salutation" formControlName="salutation">
+                    <mat-option *ngFor="let salutation of salutations" [value]="salutation">
+                        {{salutation.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Department</mat-label>
+                <mat-select placeholder="Select gender" formControlName="gender">
+                    <mat-option *ngFor="let gender of genders" [value]="gender">
+                        {{gender.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Reporting To</mat-label>
+                <mat-select placeholder="Select salutation" formControlName="salutation">
+                    <mat-option *ngFor="let salutation of salutations" [value]="salutation">
+                        {{salutation.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Contact No</mat-label>
+                <input matInput autocomplete="off" placeholder="Contact No" formControlName="cnt_num" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput autocomplete="off" placeholder="Mobile Number" formControlName="mob_num" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>User Role</mat-label>
+                <mat-select placeholder="Select User Role" formControlName="user_role">
+                    <mat-option *ngFor="let gender of genders" [value]="gender">
+                        {{gender.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+
+
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Mode of Recruitment</mat-label>
+                <mat-select placeholder="Select state" formControlName="state">
+                    <mat-option *ngFor="let state of states" [value]="state">
+                        {{state.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Work Location</mat-label>
+                <mat-select placeholder="Select Work Location" formControlName="state">
+                    <mat-option *ngFor="let state of states" [value]="state">
+                        {{state.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Working City/Village</mat-label>
+                <mat-select placeholder="Select Work Location" formControlName="state">
+                    <mat-option *ngFor="let state of states" [value]="state">
+                        {{state.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <input matInput [matDatepicker]="picker1" placeholder="Date Of Birth" formControlName="date_birth">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <input matInput [matDatepicker]="picker2" placeholder="Date Of Join" formControlName="date_join">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput autocomplete="off" placeholder="Enter Address" formControlName="address" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Street</mat-label>
+                <input matInput autocomplete="off" placeholder="Enter Street" formControlName="street" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Land Mark</mat-label>
+                <input matInput autocomplete="off" placeholder="Enter Land Mark" formControlName="land_mark"
+                    type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput autocomplete="off" placeholder="Enter City" formControlName="city" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>State</mat-label>
+                <mat-select placeholder="Select State" formControlName="state">
+                    <mat-option *ngFor="let state of states" [value]="state">
+                        {{state.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Pin Code</mat-label>
+                <input matInput autocomplete="off" placeholder="Enter Pin Code" formControlName="pin_code" type="text">
+                <!-- <mat-error *ngIf="personalForm.controls.email.errors?.required">Email is required</mat-error>                  -->
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" class="p-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Notes</mat-label>
+                <textarea matInput placeholder="Enter Notes" formControlName="notes"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="100" class="p-2 text-center">
+            <button mat-raised-button color="primary" class="uppercase mx-1" type="submit">Add Employee</button>
+        </div>
+
+    </form>
+</mat-card>
